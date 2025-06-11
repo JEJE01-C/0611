@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 5px;
+}
+
+.sensor-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #667eea;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.sensor-unit {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 5px;
+}
+
+.axis-data {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.axis {
+    text-align: center;
+    flex: 1;
+}
+
+.axis-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.axis-value {
+    font-size: 1.2em;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.timestamp {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    color: #333;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.status.online {
+    background: #4CAF50;
+    color: white;
+}
+
+.status.offline {
+    background: #f44336;
+    color: white;
+}
+
+.user-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.user-item {
+    padding: 8px 10px;
+    margin: 5px 0;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #667eea;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.user-sensors {
+    margin: 5px 0;
+}
+
+.sensor-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2px 0;
+    padding: 1px 0;
+    gap: 8px;
+}
+
+.sensor-label {
+    font-weight: 500;
+    color: #495057;
+    font-size: 0.75em;
+    min-width: 35px;
+}
+
+.sensor-val {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 0.75em;
+}
+
+.no-data {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 5px;
+}
+
+.user-update {
+    font-size: 0.65em;
+    color: #6c757d;
+    margin-top: 5px;
+    padding-top: 3px;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.user-list-card {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
